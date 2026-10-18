@@ -1,0 +1,314 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>BRASA BURGER | O sabor que acende sua fome</title>
+  <meta name="description" content="Conheça a BRASA BURGER, uma experiência artesanal cheia de sabor. Projeto demonstrativo de portfólio.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <!-- CABEÇALHO -->
+  <header class="header">
+    <div class="container header-content">
+
+      <a href="#inicio" class="logo">
+        BRASA <span>BURGER</span>
+      </a>
+
+      <button class="menu-toggle"
+              id="menuToggle"
+              type="button"
+              aria-label="Abrir menu"
+              aria-expanded="false"
+              aria-controls="navigation">
+        ☰
+      </button>
+
+      <nav class="navigation" id="navigation" aria-label="Menu principal">
+        <a href="#inicio" class="active">Início</a>
+        <a href="#cardapio">Cardápio</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#pedidos">Pedidos</a>
+      </nav>
+
+      <a href="#pedidos" class="header-cta">
+        PEDIR AGORA
+      </a>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO PREMIUM -->
+    <section class="hero" id="inicio">
+      <div class="container hero-content">
+
+        <div class="hero-text">
+          <span class="eyebrow">HAMBURGUERIA ARTESANAL</span>
+
+          <h1>
+            O SABOR QUE
+            <span>ACENDE</span>
+            SUA FOME.
+          </h1>
+
+          <p class="hero-description">
+            Hambúrgueres artesanais preparados para
+            transformar cada mordida em uma experiência
+            inesquecível.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#pedidos" class="btn btn-primary">
+              PEDIR AGORA
+            </a>
+
+            <a href="#cardapio" class="btn btn-outline">
+              VER CARDÁPIO
+            </a>
+          </div>
+
+          <div class="hero-navigation">
+            <span id="slideNumber">01</span>
+            <div class="progress-track">
+              <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <span>03</span>
+
+            <button id="previousBurger" type="button" aria-label="Hambúrguer anterior">←</button>
+            <button id="nextBurger" type="button" aria-label="Próximo hambúrguer">→</button>
+          </div>
+        </div>
+
+        <!-- IMAGEM PRINCIPAL INTERATIVA -->
+        <div class="hero-visual">
+          <div class="hero-glow"></div>
+
+          <img
+            id="mainBurger"
+            src="imagem/hero.png"
+            alt="Brasa Clássico, hambúrguer artesanal"
+            fetchpriority="high"
+          >
+
+          <div class="burger-info">
+            <span class="info-line"></span>
+            <h2 id="mainBurgerName">BRASA CLÁSSICO</h2>
+            <p id="mainBurgerDescription">
+              Pão brioche, blend bovino, queijo derretido,
+              alface e molho da casa.
+            </p>
+            <strong id="mainBurgerPrice">R$ 29,90</strong>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CATÁLOGO INTERATIVO -->
+    <section class="featured-products" id="cardapio">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">NOSSA SELEÇÃO</span>
+          <h2>Escolha sua próxima experiência.</h2>
+        </div>
+
+        <div class="burger-grid" id="burgerGrid">
+
+          <button class="burger-card selected"
+                  type="button"
+                  data-burger="0"
+                  aria-pressed="true">
+            <div class="burger-card-image">
+              <img src="imagem/hero.png" alt="Brasa Clássico" loading="lazy">
+            </div>
+            <div class="burger-card-content">
+              <span class="card-number">01</span>
+              <h3>Brasa Clássico</h3>
+              <p>Pão brioche, blend bovino, queijo derretido, alface e molho da casa.</p>
+              <div class="card-bottom">
+                <strong>R$ 29,90</strong>
+                <span class="card-arrow">→</span>
+              </div>
+            </div>
+          </button>
+
+          <button class="burger-card"
+                  type="button"
+                  data-burger="1"
+                  aria-pressed="false">
+            <div class="burger-card-image">
+              <img src="imagem/fogo-duplo.png" alt="Fogo Duplo" loading="lazy">
+            </div>
+            <div class="burger-card-content">
+              <span class="card-number">02</span>
+              <h3>Fogo Duplo</h3>
+              <p>Dois blends suculentos, cheddar, cebola caramelizada e picles crocante.</p>
+              <div class="card-bottom">
+                <strong>R$ 39,90</strong>
+                <span class="card-arrow">→</span>
+              </div>
+            </div>
+          </button>
+
+          <button class="burger-card"
+                  type="button"
+                  data-burger="2"
+                  aria-pressed="false">
+            <div class="burger-card-image">
+              <img src="imagem/defumado-dourado.png" alt="Defumado Dourado" loading="lazy">
+            </div>
+            <div class="burger-card-content">
+              <span class="card-number">03</span>
+              <h3>Defumado Dourado</h3>
+              <p>Blend defumado, queijo prato, bacon crocante e maionese de páprica.</p>
+              <div class="card-bottom">
+                <strong>R$ 34,90</strong>
+                <span class="card-arrow">→</span>
+              </div>
+            </div>
+          </button>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE A MARCA -->
+    <section class="about" id="sobre">
+      <div class="container about-content">
+
+        <div class="about-text">
+          <span class="eyebrow">SOBRE A BRASA</span>
+
+          <h2>
+            Fogo, ponto certo
+            e <span>paixão.</span>
+          </h2>
+
+          <p>
+            A BRASA BURGER nasceu da ideia de que um bom
+            hambúrguer começa na chama.
+          </p>
+
+          <p>
+            Cada receita é pensada com ingredientes de qualidade,
+            preparo cuidadoso e muito sabor.
+          </p>
+
+          <a href="#pedidos" class="btn btn-outline">
+            EXPLORE NOSSO SABOR →
+          </a>
+        </div>
+
+        <div class="about-values">
+
+          <div class="value-item">
+            <span class="value-icon">✦</span>
+            <div>
+              <h3>Ingredientes selecionados</h3>
+              <p>Qualidade em cada camada.</p>
+            </div>
+          </div>
+
+          <div class="value-item">
+            <span class="value-icon">✦</span>
+            <div>
+              <h3>Sabor de brasa</h3>
+              <p>Grelhado com personalidade.</p>
+            </div>
+          </div>
+
+          <div class="value-item">
+            <span class="value-icon">✦</span>
+            <div>
+              <h3>Feito com cuidado</h3>
+              <p>Do preparo até a sua mesa.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PEDIDOS -->
+    <section class="orders" id="pedidos">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">SEU MOMENTO BRASA</span>
+          <h2>Seu pedido em poucos passos.</h2>
+          <p>Escolha seu favorito e prepare-se para uma experiência cheia de sabor.</p>
+        </div>
+
+        <div class="order-box">
+
+          <label for="orderBurger">Escolha seu hambúrguer</label>
+          <select id="orderBurger">
+            <option value="0">Brasa Clássico — R$ 29,90</option>
+            <option value="1">Fogo Duplo — R$ 39,90</option>
+            <option value="2">Defumado Dourado — R$ 34,90</option>
+          </select>
+
+          <label for="orderQuantity">Quantidade</label>
+
+          <div class="quantity-control">
+            <button id="decreaseQuantity" type="button" aria-label="Diminuir quantidade">−</button>
+            <input type="number" id="orderQuantity" min="1" max="20" value="1">
+            <button id="increaseQuantity" type="button" aria-label="Aumentar quantidade">+</button>
+          </div>
+
+          <div class="order-summary">
+            <span>RESUMO DO PEDIDO</span>
+            <p id="orderDescription">1x Brasa Clássico</p>
+            <strong id="orderTotal">R$ 29,90</strong>
+          </div>
+
+          <button id="whatsappOrder" class="btn btn-primary order-button" type="button">
+            FAZER MEU PEDIDO →
+          </button>
+
+          <p id="orderNotice" class="order-notice" role="status" aria-live="polite"></p>
+
+        </div>
+
+        <p class="demo-disclaimer">
+          Projeto demonstrativo de portfólio. Produtos e preços fictícios.
+        </p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="footer">
+    <div class="container footer-content">
+
+      <a href="#inicio" class="logo">
+        BRASA <span>BURGER</span>
+      </a>
+
+      <p>O sabor que acende sua fome.</p>
+
+      <small>
+        © 2026 BRASA BURGER — Projeto fictício de portfólio.
+      </small>
+
+    </div>
+  </footer>
+
+</body>
+</html>
